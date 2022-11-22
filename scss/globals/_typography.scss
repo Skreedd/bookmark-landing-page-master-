@@ -1,0 +1,29 @@
+@use '../util';
+
+h1, h2, h3, h4, h5 {
+    font-weight: 500;
+    margin-top: 0;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: clamp(util.rem(35), util.rem(16) + 3vw, util.rem(60));
+}
+h2 {
+    font-size: clamp(util.rem(18), util.rem(16) + 2vw, util.rem(40));
+}
+h4 {
+    font-size: clamp(util.rem(8), util.rem(14) + 2vw, util.rem(18));
+    font-weight: 400;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: clamp(util.rem(8), util.rem(14) + 1vw, util.rem(16));
+    color: var(--Grayish-Blue);
+    font-weight: lighter;
+    line-height: 1.5;
+
+}
+

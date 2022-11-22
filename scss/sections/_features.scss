@@ -1,0 +1,79 @@
+@use '../util';
+
+
+.features {
+    margin-bottom: 3rem;
+
+    @include util.breakpoint-down(small) {
+        max-width: util.rem(350);
+        img {
+            width: 100%;
+        }
+    }
+    
+    &__text {
+        text-align: center;
+        margin: 0 auto 3rem auto;
+        max-width: util.rem(450);
+    }
+
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+
+    
+
+    @include util.breakpoint-down(large) {
+        flex-direction: column;
+    }
+    
+    &__btn {
+        border-bottom: 1px solid var(--Grayish-Blue);
+        &:hover {
+            color: var(--Soft-Red);
+        }
+        @include util.breakpoint-down(large) {
+            width: 100%;
+        }
+    }
+    &__btn:hover {
+        border-bottom: 0.125rem solid var(--Soft-Red);
+    }
+
+    &__content {
+        margin: 0 auto;
+        text-align: left;
+        align-items: center;
+        display: flex;
+        
+       
+    
+        @include util.breakpoint-down(large) {
+
+            .tab__text {
+                max-width: util.rem(475);
+            }
+        
+            flex-direction: column;
+            text-align: center;
+            img {
+                max-width: util.rem(350);
+            }
+
+            p {
+
+                text-align: center;
+                margin: auto;
+                margin-bottom: 1.5rem;
+            }
+            .btn__moreInfo {
+                display: none;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,128 @@
+@use '../util';
+
+// login BTNs
+.btn {
+    &__login {
+        width: util.rem(95);
+        height: util.rem(40);
+        background-color: var(--Soft-Red);
+        border: none;
+        border-radius: 0.3125rem;
+        text-transform: uppercase;
+        align-items: center;
+        color: var(--main-white);
+        
+        &:hover {
+            background-color: var(--main-white);
+            transition: 300ms ease-in-out;
+            border: 1px solid var(--Soft-Red);
+        }
+
+    }
+    &__signUp {
+        width: util.rem(125);
+        height: util.rem(40);
+        background-color: var(--Soft-Red);
+        border: none;
+        border-radius: 0.3125rem;
+        text-transform: uppercase;
+        align-items: center;
+        color: var(--main-white);
+
+        &:hover {
+            background-color: var(--main-white);
+            transition: 300ms ease-in-out;
+            border: 1px solid var(--Soft-Red);
+        }
+    }
+    &__open {
+     width: 100%;
+     background-color: transparent;
+     border: 0.125rem solid var(--main-white);
+     padding: 1rem;
+     height: util.rem(60);
+     font-weight: bold;
+     letter-spacing: 0.09375rem;
+     &:hover {
+        background-color: transparent;
+        color: var(--Soft-Red);
+        transition: 300ms ease;
+     }
+    }
+    
+    &__chrome, &__firefox {
+        width: util.rem(180);
+        height: util.rem(40);
+        border: none;
+        border-radius: 0.25rem;
+        font-weight: 400;
+
+        @include util.breakpoint-down(large) {
+            width: clamp(util.rem(140), util.rem(160) + 2vw, util.rem(180));                                                       
+        }
+
+    }
+
+    &__chrome {
+        background-color: var( --Soft-Blue);
+        color: var(--main-white);
+        margin-right: 0.5rem;
+
+        &:hover {
+            background-color: var(--main-white);
+            color: var(--Soft-Blue);
+            border: 1px solid var(--Soft-Blue);
+        }
+    }
+    &__firefox {
+
+        background-color: var(--main-white);
+        color: var(--Very-Dark-Blue);
+        box-shadow: 0.0625rem 0.4rem 0.4rem rgba(0,0,0,0.15);
+
+        &:hover {
+            background-color: var(--main-white);
+            color: var(--Very-Dark-Blue);
+            border: 1px solid var(--Very-Dark-Blue);
+            box-shadow: none;
+        }
+    }
+    &__moreInfo {
+        width: util.rem(115);
+        height: util.rem(35);
+        line-height: 0;
+        border: none;
+        border-radius: 0.25rem;
+        background-color: var(--Soft-Blue);
+        
+        a {
+            color: var(--main-white);
+        }
+    }
+}
+
+// Tab btns
+button, .tab__btn {
+    border: none;
+    height: util.rem(40);
+    padding: 1rem;
+    width: util.rem(215);
+    line-height: 0.5;
+    font-size: 1rem;
+    background-color: var(--main-white);
+    cursor: pointer;
+}
+
+// Download Extension Btn
+.btn__install {
+    background-color: var(--Soft-Blue);
+    border: none;
+    color: var(--main-white);
+    border-radius: 0.25rem;
+
+    &:hover {
+        background-color: var(--main-white);
+        color: var(--Soft-Blue);
+        border: 1px solid var(--Soft-Blue);
+    }
+}

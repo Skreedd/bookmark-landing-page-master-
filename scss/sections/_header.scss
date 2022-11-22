@@ -1,0 +1,62 @@
+@use '../util';
+
+.header {
+    align-items: center;
+    margin-bottom: 3rem;
+
+    img {
+         width: clamp(util.rem(200), util.rem(500) + 9vw, util.rem(657));
+
+    }
+    @include util.breakpoint-down(small) {
+        margin: 0 auto 3rem auto;
+        max-width: util.rem(355);
+        img {
+            width: 100%;
+        }
+    } 
+
+    @include util.breakpoint-down(large) {
+        .header__markup {
+            grid-row: 1;
+            margin: auto;
+            
+        }
+        .header__text {
+        grid-row: 2;
+        margin: 0 auto;
+        text-align: center;
+        }
+    }
+
+}
+
+
+// DOWNLOAD EXTENSION SECTIONS
+.downloads {
+    text-align: center;
+    
+    @include util.breakpoint-down(large) {
+        width: util.rem(350);
+        margin: 3rem auto;
+    }
+}
+
+.chrome, .firefox, .opera {
+    padding: 1.5rem 0;
+    box-shadow: 0.0625rem 0.5rem 0.5rem rgba(0,0,0,0.15);
+    border: none;
+    border-radius: 0.5rem;
+    img {
+        margin-bottom: 1.5rem;
+    }
+    margin: 0 0 auto;
+    
+}
+.firefox {
+    margin-top: 3rem;
+}
+.opera {
+    margin-top: 6rem;
+}
+

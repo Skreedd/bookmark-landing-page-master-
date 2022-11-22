@@ -1,0 +1,43 @@
+@use '../util';
+
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: util.$font;
+    font-size: util.rem(18);
+    
+    &.noscroll {
+        overflow: hidden;
+    }
+    
+}
+
+main {
+    margin: 0 auto;
+    max-width: util.rem(1200);
+    @include util.breakpoint-down(large) {
+        margin: 0 auto;
+        width: clamp(util.rem(300), util.rem(550) + 2vw, util.rem(700));
+    }
+    @include util.breakpoint-down(small) {
+        margin: 0 auto;
+        width: clamp(util.rem(300), util.rem(350) + 1vw, util.rem(400));
+    }
+
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
